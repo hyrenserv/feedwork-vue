@@ -77,17 +77,19 @@
       *
       */
      export default new Router({
-                 routes: [{
-                         path: '/',
-                         name: 'login',
-                         component: () => import('@/hrds/login/login.vue'),
-                         children: [{
-                                 path: '/systemParameters',
-                                 name: 'systemParameters',
-                                 component: () => import('@/hrds/a/syspara/index.vue')
-                             }
-                         }]
-                 })
+	    routes: [
+		{ path: '/', name: 'login', component: () => import('@/hrds/login/login.vue') },
+		{
+		    //菜单路由地址配置
+		    path: "/home", name: 'home', component: () => import('@/hrds/components/menu'), children: [
+			{ path: '/systemParameters', name: 'systemParameters', component: () => import('@/hrds/a/syspara/syspara.vue') 				},
+		    ]
+		},
+
+		//其他访问连接直接跳转到无效页面
+		{ path: '*', name: '*', component: () => import('@/hrds/components/notFound.vue') },
+	    ]
+	})
 ```
 
    - store 存储公共的数据, 如: 保存用户登陆信息, 清空用户登陆信息等
