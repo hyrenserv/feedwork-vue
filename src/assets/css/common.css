@@ -1,0 +1,570 @@
+/* ------------------------------------- button ------------------------------------------------------ */
+
+/* 按钮设置样式的class名称,需要给button设置class="elButton"实现更改样式*/
+/*按钮大小设置需在el-button标签设置size属性实现*/
+/*删除 确定 取消 可以通过设置button的type属性实现*/
+.elButton {}
+
+.el-button--primary {
+    color: #FFF !important;
+    background-color: #3a8ee6 !important;
+    border-color: #3a8ee6 !important;
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+    background: #66b1ff;
+    border-color: #66b1ff;
+    color: #FFF
+}
+
+.el-button--primary.is-active,
+.el-button--primary:active {
+    background: #3a8ee6;
+    border-color: #3a8ee6;
+    color: #FFF
+}
+
+.el-button--primary:active {
+    outline: 0
+}
+
+.el-button--primary.is-disabled,
+.el-button--primary.is-disabled:active,
+.el-button--primary.is-disabled:focus,
+.el-button--primary.is-disabled:hover {
+    color: #FFF;
+    background-color: #a0cfff;
+    border-color: #a0cfff
+}
+
+.el-button--primary.is-plain {
+    color: #409EFF;
+    background: #ecf5ff;
+    border-color: #b3d8ff
+}
+
+.el-button--primary.is-plain:focus,
+.el-button--primary.is-plain:hover {
+    background: #409EFF;
+    border-color: #409EFF;
+    color: #FFF
+}
+
+.el-button--primary.is-plain:active {
+    background: #3a8ee6;
+    border-color: #3a8ee6;
+    color: #FFF;
+    outline: 0
+}
+
+.el-button--primary.is-plain.is-disabled,
+.el-button--primary.is-plain.is-disabled:active,
+.el-button--primary.is-plain.is-disabled:focus,
+.el-button--primary.is-plain.is-disabled:hover {
+    color: #8cc5ff;
+    background-color: #ecf5ff;
+    border-color: #d9ecff
+}
+
+/*success  */
+.el-button--success {
+    color: #FFF;
+    background-color: #67C23A;
+    border-color: #67C23A
+}
+
+.el-button--success:focus,
+.el-button--success:hover {
+    background: #85ce61;
+    border-color: #85ce61;
+    color: #FFF
+}
+
+.el-button--success.is-active,
+.el-button--success:active {
+    background: #5daf34;
+    border-color: #5daf34;
+    color: #FFF
+}
+
+.el-button--success:active {
+    outline: 0
+}
+
+.el-button--success.is-disabled,
+.el-button--success.is-disabled:active,
+.el-button--success.is-disabled:focus,
+.el-button--success.is-disabled:hover {
+    color: #FFF;
+    background-color: #b3e19d;
+    border-color: #b3e19d
+}
+
+.el-button--success.is-plain {
+    color: #67C23A;
+    background: #f0f9eb;
+    border-color: #c2e7b0
+}
+
+.el-button--success.is-plain:focus,
+.el-button--success.is-plain:hover {
+    background: #67C23A;
+    border-color: #67C23A;
+    color: #FFF
+}
+
+.el-button--success.is-plain:active {
+    background: #5daf34;
+    border-color: #5daf34;
+    color: #FFF;
+    outline: 0
+}
+
+.el-button--success.is-plain.is-disabled,
+.el-button--success.is-plain.is-disabled:active,
+.el-button--success.is-plain.is-disabled:focus,
+.el-button--success.is-plain.is-disabled:hover {
+    color: #a4da89;
+    background-color: #f0f9eb;
+    border-color: #e1f3d8
+}
+
+/* warning */
+.el-button--warning {
+    color: #FFF;
+    background-color: #E6A23C;
+    border-color: #E6A23C
+}
+
+.el-button--warning:focus,
+.el-button--warning:hover {
+    background: #ebb563;
+    border-color: #ebb563;
+    color: #FFF
+}
+
+.el-button--warning.is-active,
+.el-button--warning:active {
+    background: #cf9236;
+    border-color: #cf9236;
+    color: #FFF
+}
+
+.el-button--warning:active {
+    outline: 0
+}
+
+.el-button--warning.is-disabled,
+.el-button--warning.is-disabled:active,
+.el-button--warning.is-disabled:focus,
+.el-button--warning.is-disabled:hover {
+    color: #FFF;
+    background-color: #f3d19e;
+    border-color: #f3d19e
+}
+
+.el-button--warning.is-plain {
+    color: #E6A23C;
+    background: #fdf6ec;
+    border-color: #f5dab1
+}
+
+.el-button--warning.is-plain:focus,
+.el-button--warning.is-plain:hover {
+    background: #E6A23C;
+    border-color: #E6A23C;
+    color: #FFF
+}
+
+.el-button--warning.is-plain:active {
+    background: #cf9236;
+    border-color: #cf9236;
+    color: #FFF;
+    outline: 0
+}
+
+.el-button--warning.is-plain.is-disabled,
+.el-button--warning.is-plain.is-disabled:active,
+.el-button--warning.is-plain.is-disabled:focus,
+.el-button--warning.is-plain.is-disabled:hover {
+    color: #f0c78a;
+    background-color: #fdf6ec;
+    border-color: #faecd8
+}
+
+/* danger */
+.el-button--danger {
+    color: #FFF;
+    background-color: #F56C6C;
+    border-color: #F56C6C
+}
+
+.el-button--danger:focus,
+.el-button--danger:hover {
+    background: #f78989;
+    border-color: #f78989;
+    color: #FFF
+}
+
+.el-button--danger.is-active,
+.el-button--danger:active {
+    background: #dd6161;
+    border-color: #dd6161;
+    color: #FFF
+}
+
+.el-button--danger:active {
+    outline: 0
+}
+
+.el-button--danger.is-disabled,
+.el-button--danger.is-disabled:active,
+.el-button--danger.is-disabled:focus,
+.el-button--danger.is-disabled:hover {
+    color: #FFF;
+    background-color: #fab6b6;
+    border-color: #fab6b6
+}
+
+.el-button--danger.is-plain {
+    color: #F56C6C;
+    background: #fef0f0;
+    border-color: #fbc4c4
+}
+
+.el-button--danger.is-plain:focus,
+.el-button--danger.is-plain:hover {
+    background: #F56C6C;
+    border-color: #F56C6C;
+    color: #FFF
+}
+
+.el-button--danger.is-plain:active {
+    background: #dd6161;
+    border-color: #dd6161;
+    color: #FFF;
+    outline: 0
+}
+
+.el-button--danger.is-plain.is-disabled,
+.el-button--danger.is-plain.is-disabled:active,
+.el-button--danger.is-plain.is-disabled:focus,
+.el-button--danger.is-plain.is-disabled:hover {
+    color: #f9a7a7;
+    background-color: #fef0f0;
+    border-color: #fde2e2
+}
+
+/* info */
+.el-button--info {
+    color: #FFF;
+    background-color: #909399;
+    border-color: #909399
+}
+
+.el-button--info:focus,
+.el-button--info:hover {
+    background: #a6a9ad;
+    border-color: #a6a9ad;
+    color: #FFF
+}
+
+.el-button--info.is-active,
+.el-button--info:active {
+    background: #82848a;
+    border-color: #82848a;
+    color: #FFF
+}
+
+.el-button--info:active {
+    outline: 0
+}
+
+.el-button--info.is-disabled,
+.el-button--info.is-disabled:active,
+.el-button--info.is-disabled:focus,
+.el-button--info.is-disabled:hover {
+    color: #FFF;
+    background-color: #c8c9cc;
+    border-color: #c8c9cc
+}
+
+.el-button--info.is-plain {
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6
+}
+
+.el-button--info.is-plain:focus,
+.el-button--info.is-plain:hover {
+    background: #909399;
+    border-color: #909399;
+    color: #FFF
+}
+
+.el-button--info.is-plain:active {
+    background: #82848a;
+    border-color: #82848a;
+    color: #FFF;
+    outline: 0
+}
+
+.el-button--info.is-plain.is-disabled,
+.el-button--info.is-plain.is-disabled:active,
+.el-button--info.is-plain.is-disabled:focus,
+.el-button--info.is-plain.is-disabled:hover {
+    color: #bcbec2;
+    background-color: #f4f4f5;
+    border-color: #e9e9eb
+}
+
+/* ------------------------------------- table ------------------------------------------------------ */
+
+/* 表格表头样式,不需要添加属性即可更改，如有特别样式请自行设置class名谢谢 */
+.el-table th {
+    background-color: #3d8dd2 !important;
+    color: #fff;
+    height: 20px !important;
+    line-height: 20px !important;
+}
+
+/* 斑马纹样式，需要在table里面写stripe属性然后在这里实现样式的更改 */
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background-color: rgb(252, 249, 249) !important;
+}
+
+/* 表格td样式，不需要添加属性即可更改 */
+.el-table--enable-row-transition .el-table__body td {
+    /*   background-color: cyan; */
+}
+
+/* 其他表格鼠标划入时的颜色，不需要添加属性即可更改 */
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    /* background-color:#7ba6cf86 !important; */
+}
+
+/* 默认表格鼠标划入时的颜色，不需要添加属性即可更改 */
+.el-table__body tr.hover-row.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped>td,
+.el-table__body tr.hover-row>td {
+    /* background-color:#7ba6cf86 !important; */
+}
+
+/* ------------------------------------- radio ------------------------------------------------------- */
+
+/*单选框默认样式设置，不需要添加属性，可以直接更改*/
+.el-radio__inner {}
+
+/*单选框默认字体样式设置，不需要添加属性，可以直接更改*/
+.el-radio__label {}
+
+/*单选框选中样式设置，不需要添加属性，可以直接更改*/
+.el-radio__input.is-checked .el-radio__inner {}
+
+/*单选框选中字体样式设置，不需要添加属性，可以直接更改*/
+.el-radio__input.is-checked+.el-radio__label {}
+
+/* 如果需要只设置单独的某一个radio，需要在el-radio添加id="manuallyChange"实现 */
+/*单选框样式设置*/
+#manuallyChange .el-radio__inner {}
+
+/*单选框字体样式设置，*/
+#manuallyChange .el-radio__label {}
+
+/*单选框选中样式设置*/
+#manuallyChange .el-radio__input.is-checked .el-radio__inner {
+    /* border-color:rgb(83, 168, 33);
+    background: rgb(83, 168, 33); */
+}
+
+/*单选框选中字体样式设置*/
+#manuallyChange .el-radio__input.is-checked+.el-radio__label {
+    /* color: rgb(83, 168, 33); */
+}
+
+/* ------------------------------------- message ------------------------------------------------------- */
+/* 在更改样式之前，需要在methods的方法this.$confirm里添加cancelButtonClass或者confirmButtonClass */
+/*message取消按钮的默认样式*/
+.btn-cancel {
+    background-color: #F56C6C;
+    color: #FFFFFF;
+    border: 1px solid #F56C6C;
+}
+
+.btn-cancel:hover {
+    background-color: #F56C6C;
+    color: #FFFFFF;
+    border: 1px solid #F56C6C;
+}
+
+/*message确认按钮的默认样式*/
+.btn-confirm {}
+
+/* */
+
+
+/* ------------------------------------- input ------------------------------------------------------- */
+
+/*input表单验证提示信息样式，不需要添加属性，可以直接更改*/
+.el-form-item__error {}
+
+/*input表单验证提示信息样式边框，不需要添加属性，可以直接更改*/
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-textarea__inner {
+    /* border-color: blue; */
+}
+/* 被禁用时候的样式更改 */
+.el-input.is-disabled .el-input__inner {
+    /* background-color: blue;
+    border-color: #E4E7ED;
+    color: #C0C4CC;
+    cursor: not-allowed; */
+}
+/* ------------------------------------- checkbox ------------------------------------------------------- */
+
+/*复选框默认样式设置，不需要添加属性，可以直接更改*/
+.el-checkbox__inner {}
+
+/*复选框默认字体样式设置，不需要添加属性，可以直接更改*/
+.el-checkbox__label {}
+
+/*复选框默认选中样式设置，不需要添加属性，可以直接更改*/
+.el-checkbox__input.is-checked .el-checkbox__inner {}
+
+/*复选框字体默认选中样式设置，不需要添加属性，可以直接更改*/
+.el-checkbox__input.is-checked+.el-checkbox__label {}
+
+/* 如果需要只设置单独的某一个复选框，需要在el-checkbox添加id="manuallyChangeck"实现 */
+/*复选框样式设置*/
+#manuallyChangeck .el-checkbox__inner {}
+
+/*复选框字体样式设置*/
+#manuallyChangeck .el-checkbox__label {}
+
+/*复选框选中样式设置*/
+#manuallyChangeck .el-checkbox__input.is-checked .el-checkbox__inner {}
+
+/*复选框选中字体设置*/
+#manuallyChangeck .el-checkbox__input.is-checked+.el-checkbox__label {}
+
+/* ------------------------------------- tab选项卡 ------------------------------------------------------- */
+/*选项卡的默认样式*/
+.el-tabs__nav-scroll {
+    background: #95b6f330;
+}
+
+/*选项卡的选中默认样式*/
+.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active {
+    /* background-color: chartreuse;
+    color: coral; */
+}
+/*表头筛选 */
+.el-table th>.cell.highlight{
+    color: #91c9f1 !important;
+}
+.el-table__column-filter-trigger i{
+    color: #fff !important;
+}
+/* loaging过度动画*/
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+/*编辑文本按钮颜色*/
+.editcolor{
+    color: #409eff !important;
+}
+/*删除文本按钮颜色 */
+.delcolor {
+    color: #F56C6C !important;
+}
+/* 发送文本按钮颜色 */
+.sendcolor {
+    color: #67c23a !important;
+}
+/* 发布文本按钮颜色 */
+.issuecolor{
+   color:#67c23a !important;
+}
+/* 生成作业 */
+.workcolor {
+    color: #8c8b8b !important
+}
+/*内容区顶部标题以及右侧按钮返回样式--start */
+.topTitle{
+    border-bottom: 1px solid #e6e3e3;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.topTitle>span {
+    color: #2196f3;
+    font-size: 18px;
+}
+.fa-home {
+    margin-right: 5px;
+}
+.goIndex {
+    float: right;
+    background: #337ab7;
+}
+/* 内容区顶部标题以及右侧按钮返回样式--end */
+.dialogtitle{
+    font-size: 16px;
+    color: #409EFF;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.dialogtoptxt{
+    font-size: 16px;
+    color: #656262;
+    margin-left: 5px;
+}
+.dialogtopname {
+    display: inline-block;
+    background: #f3eded;
+    color: #ec0b35;
+    padding: 2px;
+}
+/*弹框内居右对齐翻页  */
+.locationright {
+    text-align: right;
+    margin-top: 5px;
+}
+.el-dialog__body {
+    padding: 15px 20px !important;
+}
+.el-dialog__header{
+    border-bottom: 1px solid #f1eaea;
+}
+/* select 多选溢出样式 */
+/* .el-tag.el-tag--info{
+    max-width: 88%;
+}
+.el-select__tags-text{
+    display: inline-flex;
+    overflow: hidden;
+    max-width: 90%;
+}
+.el-select .el-tag__close.el-icon-close{
+    right: -1px !important;
+} */
+/* 翻页条居中 */
+.locationcenter {
+    text-align: center;
+    margin-top: 5px;
+}
+pre{
+    white-space: pre-wrap; /*css-3*/ 
+white-space: -moz-pre-wrap; /*Mozilla,since1999*/ 
+white-space: -pre-wrap; /*Opera4-6*/ 
+white-space: -o-pre-wrap; /*Opera7*/ 
+word-wrap: break-word; /*InternetExplorer5.5+*/ 
+}
