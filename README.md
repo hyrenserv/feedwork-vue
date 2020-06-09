@@ -82,8 +82,8 @@
                          name: 'login',
                          component: () => import('@/hrds/login/login.vue'),
                          children: [{
-                                 path: '/syspara',
-                                 name: 'syspara',
+                                 path: '/systemParameters',
+                                 name: 'systemParameters',
                                  component: () => import('@/hrds/a/syspara/index.vue')
                              }
                          }]
