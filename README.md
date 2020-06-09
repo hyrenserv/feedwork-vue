@@ -27,7 +27,7 @@
 
 ![image](https://github.com/hyrenserv/vcol/blob/master/image/vue-format.jpg)
 
-### 安装Vue-cli脚手架(目前目前项目固定版本为 2.9.6)
+### 安装Vue-cli脚手架(目前项目固定版本为 2.9.6)
 
  - vue-cli主要用于创建用户界面
 
