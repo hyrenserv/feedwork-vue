@@ -1,7 +1,35 @@
 # 一、搭建新项目的步骤
+ - 准备Git Node Vue
+ - 拉取项目架构
+ - 打开项目编辑.env.development文件的服务地址(这里默认提供一个后台服务地址, http://172.168.0.100:12345)
+  
 
+![image](https://github.com/hyrenserv/vcol/blob/master/image/server.jpg)
+
+ - 编写请求JS方法, 请求登陆
+
+    
+
+    
+
+![image](https://github.com/hyrenserv/vcol/blob/master/image/loingjs.jpg)
+
+ - 使用npm install安装运行时所需依赖
+
+![image](https://github.com/hyrenserv/vcol/blob/master/image/npm-install.jpg)
+
+ - 使用npm run serve启动服务
+
+![image](https://github.com/hyrenserv/vcol/blob/master/image/webserver.jpg)
+
+ - 访问Web
+ 
+ 
+
+![image](https://github.com/hyrenserv/vcol/blob/master/image/loginimage.jpg)
 
 # 二、详细使用说明
+
 ## 安装Git, 并克隆项目至本地
 
  
@@ -79,19 +107,31 @@
       *
       */
      export default new Router({
-	    routes: [
-		{ path: '/', name: 'login', component: () => import('@/hrds/login/login.vue') },
-		{
-		    //菜单路由地址配置
-		    path: "/home", name: 'home', component: () => import('@/hrds/components/menu'), children: [
-			{ path: '/systemParameters', name: 'systemParameters', component: () => import('@/hrds/a/syspara/syspara.vue') 				},
-		    ]
-		},
+         routes: [{
+                 path: '/',
+                 name: 'login',
+                 component: () => import('@/hrds/login/login.vue')
+             },
+             {
+                 //菜单路由地址配置
+                 path: "/home",
+                 name: 'home',
+                 component: () => import('@/hrds/components/menu'),
+                 children: [{
+                     path: '/systemParameters',
+                     name: 'systemParameters',
+                     component: () => import('@/hrds/a/syspara/syspara.vue')
+                 }, ]
+             },
 
-		//其他访问连接直接跳转到无效页面
-		{ path: '*', name: '*', component: () => import('@/hrds/components/notFound.vue') },
-	    ]
-	})
+             //其他访问连接直接跳转到无效页面
+             {
+                 path: '*',
+                 name: '*',
+                 component: () => import('@/hrds/components/notFound.vue')
+             },
+         ]
+     })
 ```
 
    - store 存储公共的数据, 如: 保存用户登陆信息, 清空用户登陆信息等
@@ -831,7 +871,7 @@ const regular = {
    根目录下执行 npm install ,此时会在根目录下出现node_modules目录...这个目录下就是依赖所需要的文件
 ```
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/install.PNG)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/install. PNG)
 
  - 启动程序
  
@@ -840,7 +880,7 @@ const regular = {
  根目录下执行 npm run serve
  ```
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/running.PNG)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/running. PNG)
 
 ## 项目打包
 
@@ -848,4 +888,4 @@ const regular = {
 根目录下执行 npm run build,此时会在根目录下出现dist目录...这个目录下的文件直接放入对应的web服务即可
 ```
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/build.PNG)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/build. PNG)
