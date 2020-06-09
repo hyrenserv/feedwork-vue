@@ -11,7 +11,9 @@
 ```shell
 npm install -g vue-cli@2.9.6
 # 如果安装过慢可使用淘宝镜像
-npm install -g cnpm --registry=https://registry.npm.taobao.org,然后在使用cnpm install -g vue-cli@2.9.6
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+# 然后在使用
+cnpm install -g vue-cli@2.9.6
 ```
 
 - 安装依赖的UI框架
