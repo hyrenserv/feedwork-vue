@@ -8,10 +8,6 @@
 
  - 编写请求JS方法, 请求登陆
 
-    
-
-    
-
 ![image](https://github.com/hyrenserv/vcol/blob/master/image/loingjs.jpg)
 
  - 使用npm install安装运行时所需依赖
@@ -20,7 +16,7 @@
 
  - 使用npm run serve启动服务
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/webserver.jpg)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/webserver.png)
 
  - 访问Web
  
