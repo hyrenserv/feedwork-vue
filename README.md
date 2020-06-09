@@ -42,6 +42,7 @@ VUE_APP_HRDS_A_API = 'http://172.168.0.100:12345'
   * login.js 编写向后台请求登陆的方法
 
 ```js
+    import request from '@/utils/request'
    /*
     *  @param data.user_id  登陆的用户名
     *  @param data.password  登陆的用户密码
@@ -71,7 +72,7 @@ VUE_APP_HRDS_A_API = 'http://172.168.0.100:12345'
 </el-form>
 ```
 
-- 请求方法调用
+  * 请求方法调用
 
 ```js
     import {
@@ -216,7 +217,6 @@ npm run serve
       *      @param component: () => import('@/hrds/login/index') 后面为路由地址的具体页面
       *      @param children: 路由下的子路由
       *  }
-
       *
       */
      export default new Router({
