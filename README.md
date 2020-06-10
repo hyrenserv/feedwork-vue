@@ -58,11 +58,11 @@ VUE_APP_HRDS_A_API = 'http://172.168.0.100:12345'
   * login.vue 编写页面布局及调用请求方法
 
 ```html
-<el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="80px">
-    <el-form-item label="登录名" prop="user_id">
+<el-form :model="ruleForm" status-icon :rules="rule" ref="ruleForm" class="demo-ruleForm" label-width="80px">
+    <el-form-item label="登录名" prop="user_id" :rules="rule.default">
         <el-input v-model="ruleForm.user_id"></el-input>
     </el-form-item>
-    <el-form-item label="密码" prop="password">
+    <el-form-item label="密码" prop="password" :rules="rule.default">
         <el-input type="password" v-model="ruleForm.password" autocomplete="off" show-password></el-input>
     </el-form-item>
     <el-form-item>
@@ -71,14 +71,14 @@ VUE_APP_HRDS_A_API = 'http://172.168.0.100:12345'
     </el-form-item>
 </el-form>
 ```
-
-  * 请求方法调用
+   * 请求方法调用
 
 ```js
     import {
         mapActions
     } from "vuex";
-    import * as addTaskAllFun from "./login";
+    import * as addTaskAllFun from "./login"
+    import * as validator from "@/utils/js/validator"
     export default {
         name: "Login",
         mounted() {
@@ -90,38 +90,13 @@ VUE_APP_HRDS_A_API = 'http://172.168.0.100:12345'
             this.enterKeyupDestroyed();
         },
         data() {
-            var validateLoginName = (rule, value, callback) => {
-                if (value === "") {
-                    callback(new Error("请输入用户名"));
-                } else {
-                    callback();
-                }
-            };
-            var validatePassword = (rule, value, callback) => {
-                if (value === "") {
-                    callback(new Error("请输入密码"));
-                } else {
-                    callback();
-                }
-            };
             return {
                 link: "",
                 ruleForm: {
                     user_id: "",
                     password: ""
                 },
-                rules: {
-                    user_id: [{
-                        required: true,
-                        validator: validateLoginName,
-                        trigger: "blur"
-                    }],
-                    password: [{
-                        required: true,
-                        validator: validatePassword,
-                        trigger: "blur"
-                    }]
-                },
+                rule: validator.default,
                 formLabelWidth: "60px"
             };
         },
@@ -133,7 +108,7 @@ VUE_APP_HRDS_A_API = 'http://172.168.0.100:12345'
                         //这里项目正式使用时,请根据用户登陆验证的方式自行修改到默认页面
                         this.login(this.ruleForm).then(res => {
                             addTaskAllFun.getDefaultPage().then(res => {
-                                this.$router.push("home");
+                                this.$router.push(res.data);
                             });
                         });
                     } else {
