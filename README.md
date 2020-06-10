@@ -959,7 +959,7 @@ const regular = {
    根目录下执行 npm install ,此时会在根目录下出现node_modules目录...这个目录下就是依赖所需要的文件
 ```
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/install. PNG)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/install.PNG)
 
  - 启动程序
  
@@ -968,7 +968,7 @@ const regular = {
  根目录下执行 npm run serve
  ```
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/running. PNG)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/running.PNG)
 
 ## 项目打包
 
@@ -976,4 +976,4 @@ const regular = {
 根目录下执行 npm run build,此时会在根目录下出现dist目录...这个目录下的文件直接放入对应的web服务即可
 ```
 
-![image](https://github.com/hyrenserv/vcol/blob/master/image/build. PNG)
+![image](https://github.com/hyrenserv/vcol/blob/master/image/build.PNG)
