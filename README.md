@@ -16,19 +16,18 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install -g vue-cli@2.9.6
 ```
 
-- 安装依赖的UI框架
-
-```shell
-# 需要在项目根目录下执行本命令
-npm install element-ui -S
-```
-
 ## 1.2. 拉取项目基础框架
 
 ```shell
 git clone https://github.com/hyrenserv/feedwork-vue.git
 ```
 
+- 安装依赖的UI框架
+
+```shell
+# 需要在项目根目录下执行本命令
+npm install element-ui -S
+```
 ## 1.3. 编写程序(以登陆功能为例)
 
 - 定义环境变量: .env.development (在项目根目录下)
