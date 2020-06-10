@@ -16,7 +16,7 @@
         </el-input>
     </el-col> -->
 
-    <el-table stripe :data="systemParameters" size="medium" border>
+    <el-table height="550" stripe :data="systemParameters" border>
         <el-table-column type="index" label="序号" width="62" align="center">
             <template slot-scope="scope">
                 <span>{{scope.$index+(currentPage - 1) * pageSize + 1}}</span>
