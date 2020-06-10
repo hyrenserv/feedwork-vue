@@ -124,7 +124,7 @@ export default {
                 pageSize: this.pageSize
             }).then((res) => {
                 if (res && res.success) {
-                    this.systemParameters = res.data.sysParas;
+                    this.systemParameters = res.data;
                     this.totalItem = res.data.totalSize;
                 }
             })

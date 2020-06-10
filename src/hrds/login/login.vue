@@ -1,10 +1,10 @@
 <template>
 <div class="login">
-    <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="demo-ruleForm" label-width="80px">
-        <el-form-item label="登录名" prop="user_id">
+    <el-form :model="ruleForm" status-icon :rules="rule" ref="ruleForm" class="demo-ruleForm" label-width="80px">
+        <el-form-item label="登录名" prop="user_id" :rules="rule.default">
             <el-input v-model="ruleForm.user_id"></el-input>
         </el-form-item>
-        <el-form-item label="密码" prop="password">
+        <el-form-item label="密码" prop="password" :rules="rule.default">
             <el-input type="password" v-model="ruleForm.password" autocomplete="off" show-password></el-input>
         </el-form-item>
         <el-form-item>
@@ -20,6 +20,7 @@ import {
     mapActions
 } from "vuex";
 import * as addTaskAllFun from "./login";
+import * as validator from "@/utils/js/validator"
 export default {
     name: "Login",
     mounted() {
@@ -51,18 +52,7 @@ export default {
                 user_id: "",
                 password: ""
             },
-            rules: {
-                user_id: [{
-                    required: true,
-                    validator: validateLoginName,
-                    trigger: "blur"
-                }],
-                password: [{
-                    required: true,
-                    validator: validatePassword,
-                    trigger: "blur"
-                }]
-            },
+            rule: validator.default,
             formLabelWidth: "60px"
         };
     },
