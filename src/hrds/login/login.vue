@@ -32,20 +32,6 @@ export default {
         this.enterKeyupDestroyed();
     },
     data() {
-        var validateLoginName = (rule, value, callback) => {
-            if (value === "") {
-                callback(new Error("请输入用户名"));
-            } else {
-                callback();
-            }
-        };
-        var validatePassword = (rule, value, callback) => {
-            if (value === "") {
-                callback(new Error("请输入密码"));
-            } else {
-                callback();
-            }
-        };
         return {
             link: "",
             ruleForm: {
@@ -64,7 +50,7 @@ export default {
                     //这里项目正式使用时,请根据用户登陆验证的方式自行修改到默认页面
                     this.login(this.ruleForm).then(res => {
                         addTaskAllFun.getDefaultPage().then(res => {
-                            this.$router.push("home");
+                            this.$router.push(res.data);
                         });
                     });
                 } else {

@@ -90,9 +90,8 @@
 </template>
 
 <script>
-import * as functionAll from "./syspara";
-import * as validator from "@/utils/js/validator";
-import regular from "@/utils/js/regular";
+import * as functionAll from "./syspara"
+import * as validator from "@/utils/js/validator"
 // 保存当前为第几页
 let savecurrentPage;
 export default {
