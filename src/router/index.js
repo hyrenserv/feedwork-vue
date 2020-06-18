@@ -26,7 +26,10 @@ export default new Router({
         {
             //菜单路由地址配置
             path: "/home", name: 'home', component: () => import('@/hrds/components/menu'), children: [
-                { path: '/systemParameters', name: 'systemParameters', component: () => import('@/hrds/a/syspara/syspara.vue') },
+                {
+                    path: '/systemParameters', name: 'systemParameters', component: () => import('@/hrds/a/syspara/syspara.vue'),
+                    meta: [{ name: '系统参数', url: '/systemParameters' }]
+                },
             ]
         },
 
