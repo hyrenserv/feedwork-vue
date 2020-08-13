@@ -22,6 +22,7 @@ const regular = {
     port_verification: { regex: /^(1(02[4-9]|0[3-9][0-9]|[1-9][0-9]{2})|[2-9][0-9]{3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$/, error: '端口不合法，正确范围1024-65535', title: 'agent端口' },
     webContext: { regex: /^[/]{1}[a-zA-Z]+$/, error: '请使用"/"开头,字母结尾', title: 'Agent Context路径' },
     agent_pattern: { regex: /^[/]{1}\w+[/]{1}[*]{1}$/, error: '请使用"/"开头,并以"/*"结尾,不能包含特殊符号', title: 'Agent访问路径' },
+    table: { regex: /^[a-zA-Z][a-zA-Z0-9_]*$/, error: '以英文字母开头，只能包含英文字母、数字、下划线', title: '表名验证' }
 }
 
 
